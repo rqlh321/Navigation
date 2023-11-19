@@ -8,7 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class ColoredViewModel @Inject constructor(
+class ColorViewModel @Inject constructor(
     private val router: Router,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {

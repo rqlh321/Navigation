@@ -1,4 +1,4 @@
-package com.example.navigation.third
+package com.example.navigation.second.a
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,15 +11,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
-fun GreetingThird() {
-    val viewModel = hiltViewModel<GreetingThirdViewModel>()
+fun AScreen() {
+    val viewModel = hiltViewModel<AViewModel>()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Text("Hello Third!")
-        Button(onClick = viewModel::toSecond) { Text("To second screen") }
+        Text("Hello on Second!")
+        Button(onClick = viewModel::toColorScreen) { Text("To colored") }
     }
 }

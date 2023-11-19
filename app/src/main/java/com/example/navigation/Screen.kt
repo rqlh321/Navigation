@@ -11,17 +11,19 @@ sealed class Screen(
 
     fun routeWithArgs(value: Any = Any()) = route.replace("{${KEY}}", value.toString())
 
+    object A : Screen("a")
+    object B : Screen("b")
+    object C : Screen("c")
+
     object First : Screen("1")
     object Second : Screen("2")
-    object SecondInitial : Screen("2.1")
     object Color : Screen(
-        route = "2.2/{${KEY}}",
+        route = "color/{${KEY}}",
         navArgs = listOf(navArgument(KEY) { type = NavType.IntType })
     )
 
-    object Third : Screen("3")
-
     companion object {
         const val KEY = "key"
+        const val ROOT_LAYER = "root"
     }
 }

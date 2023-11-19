@@ -1,4 +1,4 @@
-package com.example.navigation.fisrt
+package com.example.navigation.second.b
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,15 +11,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
-fun GreetingFirst() {
-    val viewModel = hiltViewModel<GreetingFirstViewModel>()
+fun BScreen() {
+    val viewModel = hiltViewModel<BViewModel>()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Text("Hello on First Screen!")
-        Button(onClick = viewModel::toSecondScreen) { Text("To second screen!") }
+        Text("Hello Third!")
+        Button(onClick = viewModel::toSecond) { Text("To second screen") }
     }
 }

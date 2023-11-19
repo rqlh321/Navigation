@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Navigation</string>
+    <string name="prefs_name">prefs</string>
 </resources>

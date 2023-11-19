@@ -1,4 +1,4 @@
-package com.example.navigation.fisrt
+package com.example.navigation.second.b
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,11 +9,12 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class GreetingFirstViewModel @Inject constructor(
+class BViewModel @Inject constructor(
     private val router: Router
 ) : ViewModel() {
-
-    fun toSecondScreen() {
-        viewModelScope.launch { router.navigateInRoot(Screen.Second.route) }
+    fun toSecond() {
+        viewModelScope.launch {
+            router.navigateInRoot(Screen.Second.route)
+        }
     }
 }
